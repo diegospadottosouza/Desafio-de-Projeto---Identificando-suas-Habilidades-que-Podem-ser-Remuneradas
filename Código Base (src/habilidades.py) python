@@ -1,0 +1,24 @@
+import streamlit as st
+import json
+
+# Carregar exemplos de habilidades
+with open("data/exemplos_habilidades.json", "r", encoding="utf-8") as f:
+    habilidades_exemplo = json.load(f)
+
+def analisar_habilidade(habilidade):
+    if "python" in habilidade.lower():
+        return "Programação e automação"
+    elif "design" in habilidade.lower():
+        return "Design gráfico e UX/UI"
+    elif "marketing" in habilidade.lower():
+        return "Marketing digital e social media"
+    else:
+        return "Explorar oportunidades de freelancing e consultoria"
+
+st.title("💼 IA - Identifique Habilidades Remuneradas")
+st.write("Descubra quais das suas competências podem gerar renda!")
+
+habilidade = st.text_input("Digite uma habilidade que você possui:")
+if habilidade:
+    area = analisar_habilidade(habilidade)
+    st.success(f"Sua habilidade pode ser monetizada em: **{area}**")
