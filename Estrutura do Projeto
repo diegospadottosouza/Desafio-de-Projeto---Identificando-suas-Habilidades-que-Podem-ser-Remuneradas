@@ -1,0 +1,12 @@
+IA-Habilidades-Remuneradas/
+│
+├── README.md
+├── src/
+│   ├── habilidades.py
+│   └── avaliador.py
+├── data/
+│   └── exemplos_habilidades.json
+├── docs/
+│   └── guia_instalacao.md
+├── requirements.txt
+└── .gitignore
